@@ -1,3 +1,6 @@
+import * as readline from 'node:readline/promises';
+import * as readline from 'node:readline';
+
 var secretNumber = 10;
 
 const checkGuess = function(num) {
