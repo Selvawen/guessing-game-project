@@ -14,4 +14,4 @@ Enter a guess: *12*
 Correct!
 YOU WON.
 
-I'll be building this project in phases, with each phase bringing us closer to the final product shown above. It's important that you follow the phases closely and don't jump the gun by ignoring the instructions and attempting to create your own game quickly. For these guided projects, the journey is more important than the final destination. 
+I'll be building this project in phases, with each phase bringing us closer to the final product shown above. 
