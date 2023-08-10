@@ -1,3 +1,10 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+})
+
 import * as readline from 'node:readline/promises';
 import * as readline from 'node:readline';
 
@@ -16,4 +23,3 @@ const checkGuess = function(num) {
     }
 }
 
-//git testing
