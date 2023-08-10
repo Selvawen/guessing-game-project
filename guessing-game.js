@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 });
 
 
-var secretNumber = 10;
+// this is the old value of secretNumber: var secretNumber = 10;
 
 const checkGuess = function (num) {
     if (num > secretNumber) {
@@ -21,6 +21,12 @@ const checkGuess = function (num) {
     }
 }
 
+function randomInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const secretNumber = randomInRange();
+
+
 const askGuess = () => {
     rl.question('Enter a guess: ', function (userNum) {
         const guessNum = Number(userNum);
@@ -33,5 +39,18 @@ const askGuess = () => {
     });
 }
 
-askGuess();
+//askGuess();
 
+function askRange() {
+    rl.question('Enter a max number: ', function(maxRange) {
+        rl.question('Enter a min number: ', function(minRange) {
+            const min = Number(minRange);
+            const max = Number(maxRange);
+            const secretNumber = randomInRange(min, max);
+            console.log(`I'm thinking of a number between ${min} and ${max}...`);
+            askGuess(); 
+        });
+    });
+}
+
+askRange();
