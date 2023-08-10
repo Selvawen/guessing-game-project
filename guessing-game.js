@@ -15,3 +15,5 @@ const checkGuess = function(num) {
         return true;
     }
 }
+
+//git testing
