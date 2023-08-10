@@ -35,7 +35,3 @@ const askGuess = () => {
 
 askGuess();
 
-rl.on('close', function () {
-    console.log('Goodbye!');
-    process.exit(0);
-});
