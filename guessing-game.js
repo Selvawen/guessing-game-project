@@ -3,14 +3,12 @@ const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
-})
+});
 
-import * as readline from 'node:readline/promises';
-import * as readline from 'node:readline';
 
 var secretNumber = 10;
 
-const checkGuess = function(num) {
+const checkGuess = function (num) {
     if (num > secretNumber) {
         console.log('Too high.');
         return false;
@@ -23,3 +21,21 @@ const checkGuess = function(num) {
     }
 }
 
+const askGuess = () => {
+    rl.question('Enter a guess: ', function (userNum) {
+        const guessNum = Number(userNum);
+        if (checkGuess(guessNum)) {
+            console.log('You win!');
+            rl.close();
+        } else {
+            askGuess();
+        }
+    });
+}
+
+askGuess();
+
+rl.on('close', function () {
+    console.log('Goodbye!');
+    process.exit(0);
+});
