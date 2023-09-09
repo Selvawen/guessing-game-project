@@ -70,4 +70,3 @@ function askLimit() {
 askLimit(); 
 
 //You lose.
-//You win!
